@@ -1,9 +1,30 @@
-The playground of leveldb for study purpose. The code is synced with the original source routinely. If you want to maintain your own synchronized repository, you can refer my steps below.
+leveldb playground for study purpose. The code is synced with the original source routinely. If you want to maintain your own synchronized repository, you can refer my steps below.
+
+- Fork
 1. Make sure git-svn is installed. I use macports.
    sudo port install git-core +svn
 2. git svn clone http://leveldb.googlecode.com/svn/trunk/ leveldb-read-only
 3. git remote add origin git@github.com:tianzhou/leveldb_playground.git
 4. git push origin master
+
+After forking the svn repository, create another branch. The master branch is only used to sync with the original svn repository. Then merge the changes from master branch to other branches. This will make life easier.
+
+Say I create a new branch playground by using
+  
+5. git branch playground
+
+- Synchronize
+1. git checkout master
+2. git svn rebase
+3. git push origin master
+4. git checkout playground
+5. git merge master
+6. git push origin playground
+
+That's it. You can also refer to this link http://stackoverflow.com/questions/796991/fork-and-synchronise-google-code-subversion-repository-into-github
+
+By Tianzhou Chen
+--------------------------------------------------------------------------
 
 leveldb: A key-value store
 Authors: Sanjay Ghemawat (sanjay@google.com) and Jeff Dean (jeff@google.com)
