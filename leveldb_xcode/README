@@ -1,0 +1,6 @@
+To build source directly in Xcode Project
+-Just add port_posix.h/cc to the target
+-Don't add *_text files to the target
+-Add preprocessor: DOS_MACOSX
+-Add cflags: -fno-builtin-memcmp -DLEVELDB_PLATFORM_POSIX
+-Add the header search path: "$SOURCE_ROOT/../include" "$SOURCE_ROOT/.."
