@@ -1,4 +1,6 @@
-leveldb playground for study purpose. The code is synced with the original source routinely. The playground branch contains
+leveldb playground for study purpose.
+The master branch is synced with original source routinely.
+The playground branch contains
 -Xcode project configured to build with source. So user can jump into source.
 
 If you want to maintain your own synchronized repository, you can refer my steps below.
